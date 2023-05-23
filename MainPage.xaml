@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="List_Practices_App.MainPage">
+
+
+    <StackLayout>
+        <Entry x:Name="Entry_PerNo" Placeholder="Personnel No" />
+        <Entry x:Name="Entry_PerName" Placeholder="Personnel Name" />
+        <Entry x:Name="Entry_PerSurname" Placeholder="Personnel Surname" />
+        <Entry x:Name="Entry_PerTelephone" Placeholder="Personnel Telephone" />
+
+        <Button Text="Add To List" Clicked="Button_Clicked" />
+
+        <Entry x:Name="Entry_Selected_PerNo" Placeholder="" />
+        <Label x:Name="lbl_Selected" Text=""/>
+
+        <Button Text="Search" Clicked="Button_Clicked_1"/>
+
+        <HorizontalStackLayout>
+            <Entry x:Name="EntryNew_No" Text=""/>
+            <Entry x:Name="EntryNew_Name" Text=""/>
+            <Entry x:Name="EntryNew_Surname" Text=""/>
+            <Entry x:Name="EntryNew_Telephone" Text=""/>
+
+        </HorizontalStackLayout>
+
+        <Button Text="Delete Selected" Clicked="Button_Clicked_2" />
+        <Button Text="Update Selected" Clicked="Button_Clicked_3"/>
+
+        <TableView x:Name="tableView">
+            <TableRoot>
+                <TableSection Title="Personels">
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="Personel No" />
+                            <Label Text="Name" />
+                            <Label Text="Surname" />
+                            <Label Text="Telephone" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <Button Text="Delete Full of List" Clicked="Button_Clicked_4" />
+
+        <Button Text="Clear Entries" Clicked="Button_Clicked_5"/>
+
+        <Label x:Name="labelCount" Text="0" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+
+    </StackLayout>
+
+</ContentPage>
